@@ -1,2 +1,2 @@
-# INFM603-latest-proj-test
- 
+# amplitude-js-test
+ Testing amplitude js

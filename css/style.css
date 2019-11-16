@@ -1,0 +1,38 @@
+
+
+
+.inner-container{
+    width:1200px;
+    height:150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -600px;
+    margin-top: -75px;
+}
+
+.beat-box{
+     margin-top: 25px;
+    width: 100px;
+    height: 100px;
+    background: rgba(0,0,0,0.7);
+    border: 2px solid white;
+    box-shadow: 1px 1px 1px 1px black;
+/*    font-size: 60px;*/
+    
+}
+
+.beat-box-keydown{
+    margin-top: 25px;
+    width: 100px;
+    height: 100px;
+    background: rgba(0,0,0,0.7);
+    border: 2px solid black;
+    box-shadow: 1px 1px 1px 1px yellow;
+    transition: all 0.07;
+}
+
+.title{
+    width:55%;
+    margin-top: 80px;
+}
