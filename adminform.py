@@ -11,8 +11,8 @@ cgitb.enable()
 
 database = mysql.connector.connect(
   host="localhost",
-  user="kjain307",
-  passwd="kjain307873",
+  user="snanda1",
+  passwd="snanda1006",
   database = "g4"
 )
 
@@ -43,25 +43,18 @@ print("""
 </select>
 <br>
 """)
-
-
 print("""
 Song URL : <input type=\"text\" name=\"songurl\"> 
 <br>
 """)
-
 print("""
 Image URL : <input type=\"text\" name=\"imageurl\"> 
 <br>
 """)
-
-
 print("""
 Song Duration : <input type=\"text\" name=\"songduration\"> 
 <br>
 """)
-
-
 
 print("""
 Category Name :
@@ -78,13 +71,33 @@ print("""
 """)
 
 
-
-
 print("""
-<<<<<<< HEAD
-<input type="submit" value="SUBMIT">
-=======
-<input type="submit" value="submit">
->>>>>>> 926cd89f6743cccbc91c9f35bd577c68135d8023
+<input type="submit" value="SUBMIT"> <strong> <a href="songdetails.py" target="iframe_songs">Songs List</a> <strong>
 </form>""")
   
+print("""
+<iframe height="300px" width="100%" src="" name="iframe_songs"></iframe>  
+""") 
+
+#Embed Delete Listener Functionality for the ADMIN
+  
+print("""
+<form method = "post" action = "http://snanda1.psjconsulting.com/deletelistener.py">
+<h2>DELETE LISTENERS
+</h2>""")
+  
+print("""
+Listener Name :
+<select name = \"username\">
+""")
+sql = "SELECT * FROM UserDetails where UserType = 'Listener'"
+mycursor.execute(sql)
+myresult = mycursor.fetchall()
+for x in myresult:
+	print(f"<option>{x[1]}</option>")
+    
+print("""
+</select> 
+<input type="submit" value="DELETE">
+</form>""")
+
