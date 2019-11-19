@@ -1,0 +1,5 @@
+CREATE Table SongsReggae SELECT
+name,artist, album, url, cover_art_url, duration, Category_type
+FROM Songs JOIN Categories ON
+Songs.Category_ID = Categories.Category_ID
+WHERE Songs.Category_ID=2

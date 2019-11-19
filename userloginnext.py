@@ -56,10 +56,9 @@ if(password == dbpassword):
     print(f"{password}")
     print(f"{dbpassword}")
     message = f"""<!DOCTYPE html>
-	<html>
+	<html style="background-color:black;">
 		<head>
 			<title>Songs Test Site</title>
-
 			<!-- Include Amplitude JS -->
 			<script type="text/javascript" src="js/amplitude.js"></script>
 		
@@ -70,95 +69,38 @@ if(password == dbpassword):
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
 			<link rel="stylesheet" href="src/css/style.css" type="text/css">
 			<link rel="stylesheet" href="src/css/animate.css">
+			 <link rel="stylesheet" type="text/css" href="css/recstyle.css">
+			 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		</head>
 		<body class="inner-container" style="opacity:1;"> 
-		<h4 style="margin-top:10%; margin-left:45%"> Hello, {userfirstname} </h4> <br>
-		<input type="button"/ value="Category">
-			<!-- Blue Playlist Container -->
-			<div id="blue-playlist-container" style="margin-top: -7%;">
-				<!-- Amplitude Player -->
-				<div id="amplitude-player">
+		<h4 style="margin-top:10%; margin-left:45%"> Hello, {userfirstname} </h4> 
+		<div> 
 
-					<!-- Left Side Player -->
-					
-					<div id="amplitude-left">
-						<img data-amplitude-song-info="cover_art_url"/>
-						<div id="player-left-bottom">
-							<div id="time-container">
-								<span class="current-time">
-									<span class="amplitude-current-minutes" ></span>:<span class="amplitude-current-seconds"></span>
-								</span>
-								<div id="progress-container">
-									<input type="range" class="amplitude-song-slider"/>
-									<progress id="song-played-progress" class="amplitude-song-played-progress"></progress>
-									<progress id="song-buffered-progress" class="amplitude-buffered-progress" value="0"></progress>
-								</div>
-								<span class="duration">
-									<span class="amplitude-duration-minutes"></span>:<span class="amplitude-duration-seconds"></span>
-								</span>
-							</div>
-
-							<div id="control-container">
-								<div id="repeat-container">
-									<div class="amplitude-repeat" id="repeat"></div>
-									<div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
-								</div>
-
-								<div id="central-control-container">
-									<div id="central-controls">
-										<div class="amplitude-prev" id="previous"></div>
-										<div class="amplitude-play-pause" id="play-pause"></div>
-										<div class="amplitude-next" id="next"></div>
-									</div>
-								</div>
-
-								<div id="volume-container">
-									<div class="volume-controls">
-										<div class="amplitude-mute amplitude-not-muted"></div>
-										<input type="range" class="amplitude-volume-slider"/>
-										<div class="ms-range-fix"></div>
-									</div>
-									<div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle-right"></div>
-								</div>
-							</div>
-
-							<div id="meta-container">
-								<span data-amplitude-song-info="name" class="song-name"></span>
-
-								<div class="song-artist-album">
-									<span data-amplitude-song-info="artist"></span>
-									<span data-amplitude-song-info="album"></span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- End Left Side Player -->
-
-					<!-- Right Side Player -->
-					<div id="amplitude-right">
-						<!-- <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="0">
-							<div class="song-now-playing-icon-container">
-								<div class="play-button-container">
-
-								</div>
-								<img class="now-playing" src="./img/now-playing.svg"/>
-							</div>
-							<div class="song-meta-data">
-								<span class="song-title">Risin' High (feat Raashan Ahmad)</span>
-								<span class="song-artist">Ancient Astronauts</span>
-							</div>
-							<a href="https://switchstancerecordings.bandcamp.com/track/risin-high-feat-raashan-ahmad" class="bandcamp-link" target="_blank">
-							</a>
-							<span class="song-duration">3:30</span>
-						</div> -->
-
-						
-						
-
-				<!-- End Amplitdue Player -->
+		<!--<div>
+		<iframe src="recording.html" width=600 height=200  name="recorder"></iframe>
+		</div>
+		-->
+		
+		<!--
+		<div id="rec">
+			   <div id="controls">
+			 <button id="recordButton">Record</button>
+			 <button id="pauseButton" disabled>Pause</button>
+			 <button id="stopButton" disabled>Stop</button>
 			</div>
-			
-			
+			<div id="formats">Format: start recording to see sample rate</div>
+			<h3>Recordings</h3>
+			<ol id="recordingsList"></ol>
+
+		</div>
+		-->
+
+		<div style="text-align:center;"> <h3><a href="testmusicplaymain.py" target="iframe_allsongs">All Songs</a> || <a href="testmusicplayerhiphop.py" target="iframe_allsongs">Hip Hop</a>
+		||  <a href="testmusicplayerreggae.py" target="iframe_allsongs">Reggae</a> ||  <a href="testmusicplayerrnb.py" target="iframe_allsongs">RNB</a>
+		||  <a href="testmusicplayerrock.py" target="iframe_allsongs">Rock</a> ||  <a href="testmusicplayerpop.py" target="iframe_allsongs">Pop</a>
+		</h3>   </div>
+			<!-- Blue Playlist Container -->
+			<iframe src="testmusicplaymain.py" width=1050 height=1000 style="margin-top:2%; margin-left: 7%" name="iframe_allsongs"></iframe>
 			<div class="row inner-container bg-dark">
 					<div class="col bg-dark text-warning text-center" onmousedown="clickA()" onmouseup="unclickA()">
 						<div data-key="65" class="beat-box my-4" id="A">
@@ -196,7 +138,7 @@ if(password == dbpassword):
 						</div>
 					</div>
 					
-					<div class="col bg-seconda3ry text-warning text-center" onmousedown="clickH()" onmouseup="unclickH()">
+					<div class="col bg-secondary text-warning text-center" onmousedown="clickH()" onmouseup="unclickH()">
 						<div data-key="72" class="beat-box my-4" id="H">
 							<span class="display-4">H</span>
 						 <p>Ride</p>
@@ -240,11 +182,15 @@ if(password == dbpassword):
 
 				NOTE: These are for handling things outside of the scope of AmplitudeJS
 			-->
+			<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+  			<script type="text/javascript" src="js/recorder.js"></script>
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 			<script type="text/javascript" src="js/functions.js"></script>
 			<script type="text/javascript" src="data.json"></script>
 			<script src="src/js/script.js"></script>
 			<script src="src/js/wow.min.js"></script>
+			
+			
 			<!-- <script type="text/javscript" src="js/amplitude.js"></script> -->
 		</body>
 	</html>

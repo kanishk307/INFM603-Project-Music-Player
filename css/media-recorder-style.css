@@ -1,0 +1,88 @@
+#media-recorder body {
+    font-family: Courier, 'Courier New', monospace;
+    padding: 1em 2em;
+    font-size: 1rem;
+  }
+  
+  #media-recorder code, pre, button {
+    font-family: Courier, 'Courier New', monospace;
+    font-size: 1rem;
+  }
+  
+  #media-recorder code {
+    color: #666;
+  }
+  
+  #media-recorder button {
+      border: 0;
+      background: #31ffd5;
+      font-family: Courier, 'Courier New', monospace;
+      font-size: 1rem;
+      padding: 0.5em 1em;
+  }
+  
+  #media-recorder button:active, button:hover {
+      background: #000;
+      color: #fff;
+  }
+  
+  #media-recorder button[disabled] {
+      background: #ccc;
+      color: #000;
+  }
+  
+  #media-recorder a, a:hover, a:visited {
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      padding-bottom: 0.1em;
+  }
+  
+  #media-recorder a {
+      box-shadow: inset 0 -3px #31ffd5;
+  }
+  
+  #media-recorder a:hover {
+      background:#31ffd5;
+  }
+  
+  #media-recorder p, li {
+    line-height: 1.3em;
+    margin: 1em 0;
+  }
+  
+  #media-recorder li {
+      margin: 0.8em 0;
+  }
+  
+  #media-recorder canvas, video {
+      max-width: 100%;
+      max-height: 60vh;
+  }
+  
+  #media-recorder .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #media-recorder .row > * {
+    text-align: center;
+  }
+  
+  #media-recorder .choices {
+      list-style-type: none;
+      margin-left: 0;
+      padding-left: 0;
+  }
+  
+  #media-recorder @media (min-width: 640px) {
+      .choices li {
+          display: inline-block;
+          margin: 0;
+      }
+  }
+  
+  #media-recorder video {
+      background: #666;
+  }
