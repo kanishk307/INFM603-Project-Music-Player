@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>User Login Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<!-- Add vue resources below -->
+	<!-- import CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+	<!-- JQuery -->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!--===============================================================================================-->
+
+</head>
+<body>
+
+	<!-- set the first div to container of the login session -->
+	<div id="login_listener" class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-50 p-b-90">
+				<form class="login100-form validate-form-login flex-sb flex-w" method = "post" action = "./userloginnext.py">
+					<input name = 'formtype' value='login' style='display:none'> 
+					<span class="login100-form-title p-b-51">
+						Login
+					</span>
+
+					<!-- alert if there is no such match in database -->
+					<div class = "limiter error_container" style='display:none'>
+						<div class = "error_comment">
+							That email and password combination is incorrect.
+						</div>
+					</div>
+					
+					<div class="wrap-input100 validate-input-login m-b-16" data-validate = "Email is required">
+						<input class="input100" type="email" name="username" placeholder="Email">
+						<span class="focus-input100"></span>
+					</div>
+					
+					
+					<div class="wrap-input100 validate-input-login m-b-16" data-validate = "Password is required">
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100"></span>
+					</div>
+
+					<!-- show info message to let users know how to log in as an admin -->
+					<div class = "limiter">
+						<a href='./adminlogin.html' class="info_message">Log in as an admin</a>
+					</div>
+			
+
+					<div class="container-login100-form-btn m-t-17">
+						<input class="login100-form-btn-admin" type="submit" value="Login">
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- add a vertical divider -->
+	<div class="divider"></div>
+
+
+	<!-- set the second div to container of the register session -->
+	<div id="register_listener" class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-50 p-b-90">
+				<form class="login100-form validate-form-register flex-sb flex-w" method = "post" action = "./userregisternext.py">
+					<input name = 'formtype' value='register' style='display:none'>
+					<span class="login100-form-title p-b-45"> <!-- change the padding-botton class to p-b-35 when error_comment happens-->
+						Register
+					</span>
+
+					<!-- alert if the username already exists in database -->
+					<div class = "limiter error_container" style='display:none'>
+						<div class = "error_comment">
+							That email has already been registered.
+						</div>
+					</div>
+
+					<!-- alert if the passwords don't match each other -->
+					<!-- first set the display to none and show it using JQuery when firing an event - -->
+					<div id="error_passwords" class = "limiter error_container" style='display:none'>
+						<div class = "error_comment">
+							Those passwords did't match. Try again.
+						</div>
+					</div>
+
+
+					<div class="wrap-input100 validate-input-register m-b-16" data-validate = "Firstname is required">
+						<input class="input100" type="text" name="firstname" placeholder="Firstname">
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<div class="wrap-input100 validate-input-register m-b-16" data-validate = "Lastname is required">
+						<input class="input100" type="text" name="lastname" placeholder="Lastname">
+						<span class="focus-input100"></span>
+					</div>
+
+					
+					<div class="wrap-input100 validate-input-register m-b-16" data-validate = "Email is required">
+						<input class="input100" type="email" name="username" placeholder="Email">
+						<span class="focus-input100"></span>
+					</div>
+					
+					
+					<div class="wrap-input100 validate-input-register m-b-16" data-validate = "Password is required">
+						<input class="input100" type="password" id="password" name="password" placeholder="Password">
+						<span class="focus-input100"></span>
+					</div>
+			
+
+					<div class="wrap-input100 validate-input-register m-b-16" data-validate = "Password is required">
+						<input class="input100" type="password" id="password_confirm" name="password_confirm" placeholder="Confirm Password">
+						<span class="focus-input100"></span>
+					</div>			
+
+
+					<div class="container-login100-form-btn m-t-17">
+						<input id="register_button" class="login100-form-btn-admin" type="submit" value="Register">
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<!-- import Vue before Element -->
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<!-- import JavaScript -->
+  	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+
+	<script>
+	/* ======================= using JQuery ======================= */
+	/* check if the passwords don't match and show error_passwords comment */
+    $(document).ready(function(){
+	  $("#register_button").click(function(event){
+	    var password = $("#password").val();
+	    var password_confirm = $("#password_confirm").val();
+	    if (password != password_confirm) {
+	      event.preventDefault();
+	      $("#error_passwords").show();
+	    }
+	  }); 
+	})
+
+ 	</script> 
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

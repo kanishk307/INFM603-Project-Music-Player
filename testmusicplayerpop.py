@@ -49,7 +49,7 @@ htmlplayer = f"""<!DOCTYPE html>
 			<link rel="stylesheet" href="src/css/style.css" type="text/css">
 			<link rel="stylesheet" href="src/css/animate.css">
 		</head>
-		<body class="inner-container" style="opacity:1;"> 
+		<body class="inner-container iframe-container" style="opacity:1;background:#000000 ;color:#827ffe;"> 
 		<h3 style="text-align:center;margin-top: -10%;"> Pop </h3>
 			<!-- Blue Playlist Container -->
 			<div id="blue-playlist-container" style="margin-top: -10%;">
@@ -77,7 +77,7 @@ htmlplayer = f"""<!DOCTYPE html>
 
 							<div id="control-container">
 								<div id="repeat-container">
-									<div class="amplitude-repeat" id="repeat"></div>
+									<!--<div class="amplitude-repeat" id="repeat"></div>-->
 									<div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
 								</div>
 

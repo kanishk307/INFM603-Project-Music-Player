@@ -49,7 +49,7 @@ htmlplayer = f"""<!DOCTYPE html>
 			<link rel="stylesheet" href="src/css/style.css" type="text/css">
 			<link rel="stylesheet" href="src/css/animate.css">
 		</head>
-		<body class="inner-container" style="opacity:1;"> 
+		<body class="inner-container" style="opacity:1;background:#000000 ;color:#827ffe;"> 
 		<h3 style="text-align:center; margin-top: -10%;"> All Songs </h3>
 			<!-- Blue Playlist Container -->
 			<div id="blue-playlist-container" style="margin-top: -10%;">
@@ -77,7 +77,7 @@ htmlplayer = f"""<!DOCTYPE html>
 
 							<div id="control-container">
 								<div id="repeat-container">
-									<div class="amplitude-repeat" id="repeat"></div>
+									<!--<div class="amplitude-repeat" id="repeat"></div>-->
 									<div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
 								</div>
 
@@ -115,24 +115,7 @@ htmlplayer = f"""<!DOCTYPE html>
 
 					<!-- Right Side Player -->
 					<div id="amplitude-right">
-						<!-- <div class="song amplitude-song-container amplitude-play-pause" data-amplitude-song-index="0">
-							<div class="song-now-playing-icon-container">
-								<div class="play-button-container">
-
-								</div>
-								<img class="now-playing" src="./img/now-playing.svg"/>
-							</div>
-							<div class="song-meta-data">
-								<span class="song-title">Risin' High (feat Raashan Ahmad)</span>
-								<span class="song-artist">Ancient Astronauts</span>
-							</div>
-							<a href="https://switchstancerecordings.bandcamp.com/track/risin-high-feat-raashan-ahmad" class="bandcamp-link" target="_blank">
-							</a>
-								
-						</div> -->
-
-						
-						
+									
 
 				<!-- End Amplitdue Player -->
 			</div>

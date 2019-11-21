@@ -596,12 +596,18 @@ div#meta-container {
   3. Layout
 */
 body {
-  background-image: -webkit-linear-gradient(316deg, #3BD2AE 0%, #36BAC2 100%);
-  background-image: linear-gradient(-226deg, #3BD2AE 0%, #36BAC2 100%);
+  background-image: -webkit-linear-gradient(316deg, #827ffe 0%, #827ffe 100%);
+  background-image: linear-gradient(-226deg, #827ffe 0%, #827ffe 100%);
   height: 100vh;
   -webkit-font-smoothing: antialiased;
   font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
   line-height: 1.5; }
+
+  
+.iframe-container{
+	background:#000000;
+	color:#827ffe;
+} 
 
 /*
   4. Pages
